@@ -3,10 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GSAP animation galore</title>
+    <title>GSAP Galore — Animate Anything</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Let's explore GSAP animations!</h1>
-    <p>What are some of the tools available for creating GSAP animations? Let's find out!</p>
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <a class="logo" href="#top">GSAP<span>galore</span></a>
+        <nav class="nav">
+            <a href="#core">Core</a>
+            <a href="#scroll">Scroll</a>
+            <a href="#svg">SVG</a>
+            <a href="#text">Text</a>
+            <a href="#ui">UI</a>
+        </nav>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+        <p class="eyebrow">{ the animation toolkit }</p>
+        <h1 class="hero__title">
+            <span class="line">Animate</span>
+            <span class="line accent">anything</span>
+        </h1>
+        <p class="hero__lead">
+            GSAP is a battle-tested JavaScript animation library. Below is a tour of its
+            core tools and plugins — each one described and shown <em>in action</em> with a
+            live, SVG-powered demo.
+        </p>
+        <a class="cta" href="#core">Explore the tools ↓</a>
+    </section>
+
+    <main>
+        <!-- ============ CORE ============ -->
+        <section class="category" id="core">
+            <h2 class="category__title">Core</h2>
+            <p class="category__sub">The engine: tweens, timelines, stagger and eases.</p>
+
+            <!-- Tween -->
+            <article class="tool" data-demo="tween">
+                <div class="tool__demo">
+                    <svg viewBox="0 0 220 220" class="js-stage">
+                        <rect class="js-box" x="20" y="85" width="50" height="50" rx="10"/>
+                    </svg>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">gsap.to()</span>
+                    <h3>Tween</h3>
+                    <p>The atom of GSAP. A tween animates any property of any object over time —
+                       position, rotation, scale, color — with smooth interpolation and easing.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+
+            <!-- Timeline -->
+            <article class="tool" data-demo="timeline">
+                <div class="tool__demo">
+                    <svg viewBox="0 0 220 220" class="js-stage">
+                        <rect class="bar" x="30"  y="180" width="22" height="0" rx="4"/>
+                        <rect class="bar" x="68"  y="180" width="22" height="0" rx="4"/>
+                        <rect class="bar" x="106" y="180" width="22" height="0" rx="4"/>
+                        <rect class="bar" x="144" y="180" width="22" height="0" rx="4"/>
+                        <circle class="ball" cx="183" cy="40" r="12"/>
+                    </svg>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">gsap.timeline()</span>
+                    <h3>Timeline</h3>
+                    <p>Sequence tweens with perfect timing. Timelines let you build complex,
+                       choreographed animations and control them as a single unit — play, pause,
+                       reverse or scrub.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+
+            <!-- Stagger -->
+            <article class="tool" data-demo="stagger">
+                <div class="tool__demo">
+                    <svg viewBox="0 0 220 220" class="js-stage js-grid"></svg>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">stagger</span>
+                    <h3>Stagger</h3>
+                    <p>Animate many elements with a single tween, offsetting each one's start time.
+                       Grid-aware staggering ripples motion outward from any point for organic waves.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+
+            <!-- Eases -->
+            <article class="tool" data-demo="eases">
+                <div class="tool__demo">
+                    <svg viewBox="0 0 220 220" class="js-stage">
+                        <g class="js-ease-rows"></g>
+                    </svg>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">ease</span>
+                    <h3>Eases</h3>
+                    <p>Easing shapes the <em>feel</em> of motion. GSAP ships a rich set —
+                       power, back, elastic, bounce and more — so movement can snap, overshoot
+                       or settle naturally.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ SCROLL ============ -->
+        <section class="category" id="scroll">
+            <h2 class="category__title">Scroll</h2>
+            <p class="category__sub">Turn scrolling into silky-smooth storytelling.</p>
+
+            <!-- ScrollTrigger -->
+            <article class="tool" data-demo="scrolltrigger">
+                <div class="tool__demo">
+                    <svg viewBox="0 0 220 220" class="js-stage">
+                        <circle class="st-shape" cx="55"  cy="110" r="26"/>
+                        <rect   class="st-shape" x="92" y="84" width="52" height="52" rx="10"/>
+                        <polygon class="st-shape" points="183,80 205,135 161,135"/>
+                    </svg>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">ScrollTrigger</span>
+                    <h3>ScrollTrigger</h3>
+                    <p>The flagship plugin. Tie any animation to the scrollbar — trigger, pin,
+                       scrub and snap. The shapes here are <strong>scrubbed</strong> directly by
+                       this card's scroll position. Scroll up and down to drive them.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ SVG ============ -->
+        <section class="category" id="svg">
+            <h2 class="category__title">SVG</h2>
+            <p class="category__sub">Draw, morph and travel along vector paths.</p>
+
+            <!-- DrawSVG -->
+            <article class="tool" data-demo="drawsvg">
+                <div class="tool__demo">
+                    <svg viewBox="0 0 220 220" class="js-stage">
+                        <circle class="draw-line" cx="110" cy="110" r="70" pathLength="1"/>
+                        <path class="draw-line" d="M76 112 L100 138 L150 84" pathLength="1"/>
+                    </svg>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">DrawSVGPlugin</span>
+                    <h3>DrawSVG</h3>
+                    <p>Animate the stroke of any SVG line or path so it appears to draw itself.
+                       Perfect for signatures, checkmarks, diagrams and reveal effects.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+
+            <!-- MorphSVG -->
+            <article class="tool" data-demo="morphsvg">
+                <div class="tool__demo">
+                    <svg viewBox="0 0 220 220" class="js-stage">
+                        <polygon class="js-morph"
+                            points="110,40 130,90 184,90 140,124 156,178 110,146 64,178 80,124 36,90 90,90"/>
+                    </svg>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">MorphSVGPlugin</span>
+                    <h3>MorphSVG</h3>
+                    <p>Seamlessly morph one shape into another, even with differing point counts.
+                       GSAP interpolates the vector points to create fluid shape transitions.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+
+            <!-- MotionPath -->
+            <article class="tool" data-demo="motionpath">
+                <div class="tool__demo">
+                    <svg viewBox="0 0 220 220" class="js-stage">
+                        <path id="mp-path" class="mp-track"
+                            d="M20 170 C 60 60, 110 60, 110 110 S 180 170, 200 60" fill="none"/>
+                        <g class="js-rocket">
+                            <circle cx="0" cy="0" r="11"/>
+                            <polygon points="11,0 -6,-7 -6,7"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">MotionPathPlugin</span>
+                    <h3>MotionPath</h3>
+                    <p>Send any element travelling along an SVG path, automatically rotating it to
+                       follow the curve. Great for orbits, routes and playful flourishes.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ TEXT ============ -->
+        <section class="category" id="text">
+            <h2 class="category__title">Text</h2>
+            <p class="category__sub">Leave them lost for words with seamless text effects.</p>
+
+            <!-- SplitText -->
+            <article class="tool" data-demo="splittext">
+                <div class="tool__demo">
+                    <div class="text-stage js-split">ANIMATE</div>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">SplitText</span>
+                    <h3>SplitText</h3>
+                    <p>Break text into characters, words or lines so each piece can be animated
+                       independently. Build dazzling headline reveals with a stagger.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+
+            <!-- ScrambleText -->
+            <article class="tool" data-demo="scramble">
+                <div class="tool__demo">
+                    <div class="text-stage js-scramble">GSAP&nbsp;ROCKS</div>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">ScrambleTextPlugin</span>
+                    <h3>ScrambleText</h3>
+                    <p>Resolve text out of a flurry of random characters for a fun, "decoding"
+                       effect — while keeping the element's width perfectly stable.</p>
+                    <button class="replay">Replay ▶</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ UI ============ -->
+        <section class="category" id="ui">
+            <h2 class="category__title">UI Interactions</h2>
+            <p class="category__sub">Create polished, engaging and accessible interactions.</p>
+
+            <!-- Draggable -->
+            <article class="tool" data-demo="draggable">
+                <div class="tool__demo">
+                    <div class="drag-stage">
+                        <div class="drag-handle js-drag">drag me</div>
+                    </div>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">Draggable</span>
+                    <h3>Draggable</h3>
+                    <p>Make any element draggable with momentum, bounds and snapping — across
+                       mouse, touch and pointer. Grab the puck and fling it around its box.</p>
+                </div>
+            </article>
+
+            <!-- Flip -->
+            <article class="tool" data-demo="flip">
+                <div class="tool__demo">
+                    <div class="flip-stage js-flip">
+                        <span class="flip-item" style="--c:#0ae448"></span>
+                        <span class="flip-item" style="--c:#9b5cff"></span>
+                        <span class="flip-item" style="--c:#27c1ff"></span>
+                        <span class="flip-item" style="--c:#ff5da2"></span>
+                    </div>
+                </div>
+                <div class="tool__info">
+                    <span class="badge">Flip</span>
+                    <h3>Flip</h3>
+                    <p>Animate between any two layout states. Record the start, change the DOM,
+                       and Flip smoothly tweens the difference — even across reflows and reorders.</p>
+                    <button class="replay">Shuffle ▶</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built with <a href="https://gsap.com" target="_blank" rel="noopener">GSAP</a>,
+           vanilla HTML, CSS &amp; JavaScript. A demo tour of the GSAP toolset.</p>
+        <p class="footer-note">Other plugins worth a look: ScrollSmoother, Observer, Inertia,
+           Physics2D, ScrollTo, Text &amp; GSDevTools.</p>
+    </footer>
+
+    <!-- ===== GSAP + plugins (cdnjs) ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
