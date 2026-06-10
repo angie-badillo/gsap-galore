@@ -204,6 +204,7 @@ const demos = {
         Draggable.create(handle, {
             bounds: root.querySelector(".drag-stage"),
             inertia: false,
+            zIndexBoost: false,
             onDragStart() { gsap.to(handle, { scale: 1.12, duration: 0.2 }); },
             onDragEnd()   { gsap.to(handle, { scale: 1, duration: 0.3, ease: "back.out(2)" }); }
         });
